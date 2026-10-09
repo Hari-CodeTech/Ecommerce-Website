@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # LUMINA LUXE - Modern E-Commerce Web Application
 
 A modern, high-end e-commerce web application built using **HTML5**, **CSS3**, and **Bootstrap 5.3**. Designed with glassmorphism, dynamic animations, dark/light mode toggle, and rich interactivity.
@@ -67,3 +68,6 @@ d:/e-com/
 │   └── app.js        # State management, cart, wishlist, filters, modals, checkout & theme logic
 └── README.md         # Documentation
 ```
+=======
+# Ecommerce-Website
+>>>>>>> c6577584261a039667dae227349c9542a4f69e25
