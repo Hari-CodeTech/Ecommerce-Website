@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUMINA LUXE | Premium Lifestyle & Tech Store</title>
+  <meta name="description" content="Discover premium audio, luxury watches, designer footwear, and curated apparel at Lumina Luxe. Complimentary express shipping on orders over $150.">
+  <meta name="keywords" content="e-commerce, luxury tech, designer apparel, premium watches, modern lifestyle store">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%236366f1'/><path d='M30 70 L50 25 L70 70 Z' fill='white'/></svg>">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container text-center">
+      <span><i class="bi bi-stars me-1 text-warning"></i> FLASH LAUNCH: Enjoy <strong>25% OFF</strong> Storewide with code <span class="badge bg-white text-dark ms-1">NOVA25</span> &bull; Free Global Express Shipping Over $150</span>
+    </div>
+  </div>
+
+  <!-- Sticky Glassmorphic Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top navbar-custom" id="mainNavbar">
+    <div class="container">
+      <!-- Brand Logo -->
+      <a class="navbar-brand navbar-brand-logo" href="#">
+        <span class="brand-icon-gem"><i class="bi bi-diamond-fill"></i></span>
+        <span class="brand-font">LUMINA<span class="gradient-text">LUXE</span></span>
+      </a>
+
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-2 text-light"></i>
+      </button>
+
+      <!-- Navbar Links & Search -->
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-3">
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom active" href="#mainNavbar">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="#catalogSection">Catalog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="#flashDealsSection">Flash Deals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="#categoriesSection">Collections</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="#testimonialsSection">Reviews</a>
+          </li>
+        </ul>
+
+        <!-- Live Search Bar -->
+        <div class="position-relative me-3 my-2 my-lg-0" style="min-width: 250px;">
+          <input type="text" id="navSearchInput" class="form-control form-control-sm rounded-pill ps-4 py-2 bg-body-tertiary border-secondary border-opacity-25" placeholder="Search headphones, watches...">
+          <i class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-2 text-muted"></i>
+        </div>
+
+        <!-- Action Buttons (Theme, Wishlist, Cart) -->
+        <div class="d-flex align-items-center gap-2">
+          <!-- Theme Toggle -->
+          <button class="nav-action-btn" id="themeToggleBtn" title="Toggle Theme" aria-label="Toggle dark/light mode">
+            <i class="bi bi-sun-fill text-warning"></i>
+          </button>
+
+          <!-- Wishlist Drawer Trigger -->
+          <button class="nav-action-btn" data-bs-toggle="offcanvas" data-bs-target="#wishlistOffcanvas" title="Saved Wishlist" aria-label="Open wishlist">
+            <i class="bi bi-heart"></i>
+            <span class="badge-counter" id="wishlistBadgeCount" style="display: none;">0</span>
+          </button>
+
+          <!-- Cart Drawer Trigger -->
+          <button class="nav-action-btn" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" title="Shopping Cart" aria-label="Open cart">
+            <i class="bi bi-bag"></i>
+            <span class="badge-counter" id="cartBadgeCount" style="display: none;">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Carousel Section -->
+  <header class="py-4">
+    <div class="container">
+      <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="6500">
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner rounded-4 shadow-lg">
+          <!-- Slide 1 -->
+          <div class="carousel-item active hero-carousel-item" style="background-image: url('https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=1600&q=80');">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+              <span class="hero-pill"><i class="bi bi-soundwave"></i> Flagship Audio 2026</span>
+              <h1 class="hero-title">Experience Sound Without Boundary.</h1>
+              <p class="hero-desc">Beryllium 40mm drivers meet military-grade hybrid noise cancellation. Engineered for the purist audio enthusiast.</p>
+              <div class="d-flex flex-wrap gap-3">
+                <button class="btn btn-primary-glow" onclick="openQuickView(1)">
+                  <span>Explore Aura Pro</span>
+                  <i class="bi bi-arrow-right"></i>
+                </button>
+                <a href="#catalogSection" class="btn btn-glass">Browse Collection</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item hero-carousel-item" style="background-image: url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=1600&q=80');">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+              <span class="hero-pill"><i class="bi bi-clock-history"></i> Haute Horlogerie</span>
+              <h1 class="hero-title">Precision Machined in Grade 5 Titanium.</h1>
+              <p class="hero-desc">Swiss Calibre automatic mechanics protected beneath scratchless sapphire crystal with 100-meter marine sealing.</p>
+              <div class="d-flex flex-wrap gap-3">
+                <button class="btn btn-primary-glow" onclick="openQuickView(2)">
+                  <span>Discover Chronograph</span>
+                  <i class="bi bi-arrow-right"></i>
+                </button>
+                <a href="#catalogSection" class="btn btn-glass">View Luxury Watches</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-item hero-carousel-item" style="background-image: url('https://images.unsplash.com/photo-1552346154-21d32810aba3?w=1600&q=80');">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+              <span class="hero-pill"><i class="bi bi-lightning-charge"></i> Carbon Energy</span>
+              <h1 class="hero-title">Vortex Runner Carbon Propulsion.</h1>
+              <p class="hero-desc">Propel forward with full-length carbon plates and nitrogen-infused reactive foam cushioning designed for podium speeds.</p>
+              <div class="d-flex flex-wrap gap-3">
+                <button class="btn btn-primary-glow" onclick="openQuickView(3)">
+                  <span>View Vortex Runner</span>
+                  <i class="bi bi-arrow-right"></i>
+                </button>
+                <a href="#catalogSection" class="btn btn-glass">All Footwear</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel Nav Buttons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon p-3 rounded-circle bg-dark bg-opacity-50" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon p-3 rounded-circle bg-dark bg-opacity-50" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Value Highlights Bar -->
+  <section class="py-4">
+    <div class="container">
+      <div class="row g-3">
+        <div class="col-6 col-lg-3">
+          <div class="glass-panel p-4 text-center feature-box h-100">
+            <div class="feature-badge-icon mx-auto"><i class="bi bi-airplane-engines"></i></div>
+            <h6 class="fw-bold mb-1">Express Global Delivery</h6>
+            <p class="text-muted small mb-0">Free expedited shipping on all orders over $150.</p>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="glass-panel p-4 text-center feature-box h-100">
+            <div class="feature-badge-icon mx-auto"><i class="bi bi-shield-check"></i></div>
+            <h6 class="fw-bold mb-1">Authenticity Guaranteed</h6>
+            <p class="text-muted small mb-0">100% genuine craftsmanship with 2-year warranty.</p>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="glass-panel p-4 text-center feature-box h-100">
+            <div class="feature-badge-icon mx-auto"><i class="bi bi-arrow-repeat"></i></div>
+            <h6 class="fw-bold mb-1">30-Day Hassle-Free Returns</h6>
+            <p class="text-muted small mb-0">Not satisfied? Return or exchange with prepaid labels.</p>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="glass-panel p-4 text-center feature-box h-100">
+            <div class="feature-badge-icon mx-auto"><i class="bi bi-headset"></i></div>
+            <h6 class="fw-bold mb-1">24/7 Concierge Service</h6>
+            <p class="text-muted small mb-0">Dedicated luxury advisors available around the clock.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Curated Category Cards Section -->
+  <section class="py-5" id="categoriesSection">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-end mb-4">
+        <div>
+          <span class="text-primary text-uppercase fw-bold small tracking-wider">Explore Departments</span>
+          <h2 class="display-6 fw-bold mb-0">Curated Collections</h2>
+        </div>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="category-card" onclick="setCategoryFilter('audio')">
+            <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=600&q=80" alt="Audio & Tech">
+            <div class="category-card-overlay">
+              <span class="badge bg-primary mb-2 align-self-start">High-Fidelity</span>
+              <h4 class="text-white fw-bold mb-1">Audio & Tech</h4>
+              <p class="text-light small mb-0">Headphones, smartwatches & speakers</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="category-card" onclick="setCategoryFilter('accessories')">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=80" alt="Luxury Accessories">
+            <div class="category-card-overlay">
+              <span class="badge bg-warning text-dark mb-2 align-self-start">Artisanal</span>
+              <h4 class="text-white fw-bold mb-1">Accessories</h4>
+              <p class="text-light small mb-0">Titanium watches, optics & wallets</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="category-card" onclick="setCategoryFilter('footwear')">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80" alt="Footwear">
+            <div class="category-card-overlay">
+              <span class="badge bg-danger mb-2 align-self-start">Propulsion</span>
+              <h4 class="text-white fw-bold mb-1">Footwear</h4>
+              <p class="text-light small mb-0">Carbon runners & Chelsea boots</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="category-card" onclick="setCategoryFilter('apparel')">
+            <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=600&q=80" alt="Apparel">
+            <div class="category-card-overlay">
+              <span class="badge bg-info text-dark mb-2 align-self-start">Grade-A Knit</span>
+              <h4 class="text-white fw-bold mb-1">Apparel</h4>
+              <p class="text-light small mb-0">Cashmere hoodies & wool overcoats</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Flash Deals Countdown Section -->
+  <section class="py-5" id="flashDealsSection">
+    <div class="container">
+      <div class="flash-deal-box">
+        <div class="row align-items-center mb-4">
+          <div class="col-lg-7 mb-3 mb-lg-0">
+            <span class="badge bg-danger text-uppercase px-3 py-2 mb-2"><i class="bi bi-stopwatch-fill me-1"></i> Limited Window</span>
+            <h2 class="display-6 fw-bold mb-2">Deal of the Day: Extra 30% Off</h2>
+            <p class="text-muted mb-0">Claim limited production inventory before the timer zeroes out. Once expired, retail pricing returns.</p>
+          </div>
+          <div class="col-lg-5 text-lg-end">
+            <div class="countdown-box">
+              <div class="countdown-item">
+                <div class="countdown-number" id="cdHours">14</div>
+                <div class="countdown-label">Hours</div>
+              </div>
+              <div class="countdown-item">
+                <div class="countdown-number" id="cdMinutes">35</div>
+                <div class="countdown-label">Mins</div>
+              </div>
+              <div class="countdown-item">
+                <div class="countdown-number" id="cdSeconds">40</div>
+                <div class="countdown-label">Secs</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flash Items Container -->
+        <div class="row g-3" id="flashDealsContainer">
+          <!-- Rendered dynamically by app.js -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Product Catalog Section -->
+  <section class="py-5" id="catalogSection">
+    <div class="container">
+      <!-- Section Title & Meta -->
+      <div class="row align-items-end mb-4">
+        <div class="col-md-6">
+          <span class="text-primary text-uppercase fw-bold small">Direct From Atelier</span>
+          <h2 class="display-6 fw-bold mb-1">Featured Catalog</h2>
+          <p class="text-muted mb-0" id="productsCountLabel">Showing products...</p>
+        </div>
+        <div class="col-md-6 mt-3 mt-md-0 d-flex flex-wrap justify-content-md-end gap-3 align-items-center">
+          <!-- Sorting Select -->
+          <div class="d-flex align-items-center gap-2">
+            <label for="sortSelect" class="text-muted small fw-semibold text-nowrap">Sort By:</label>
+            <select id="sortSelect" class="form-select form-select-sm bg-body-tertiary border-secondary border-opacity-25" style="width: 170px;">
+              <option value="featured">Featured First</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="rating">Top Customer Rated</option>
+              <option value="name">Product Name (A-Z)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filter Controls Bar -->
+      <div class="glass-panel p-3 mb-4">
+        <div class="row g-3 align-items-center">
+          <!-- Category Pills -->
+          <div class="col-12 col-xl-8">
+            <div class="d-flex flex-wrap gap-2">
+              <button class="filter-pill active" data-category="all">All Products</button>
+              <button class="filter-pill" data-category="audio"><i class="bi bi-headphones me-1"></i> Audio & Tech</button>
+              <button class="filter-pill" data-category="accessories"><i class="bi bi-watch me-1"></i> Accessories</button>
+              <button class="filter-pill" data-category="footwear"><i class="bi bi-shoe-prints me-1"></i> Footwear</button>
+              <button class="filter-pill" data-category="apparel"><i class="bi bi-person me-1"></i> Apparel</button>
+              <button class="filter-pill" data-category="living"><i class="bi bi-lamp me-1"></i> Living</button>
+            </div>
+          </div>
+
+          <!-- Price Range Slider -->
+          <div class="col-12 col-xl-4">
+            <div class="d-flex align-items-center gap-3">
+              <span class="small text-muted fw-bold text-nowrap">Max Price:</span>
+              <input type="range" class="form-range" id="priceRangeInput" min="50" max="600" step="10" value="600">
+              <span class="fw-bold text-primary" id="priceRangeValue">$600</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="row g-4" id="productGridContainer">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Reviews & Testimonials Section -->
+  <section class="py-5" id="testimonialsSection">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="text-primary text-uppercase fw-bold small">Verified Experiences</span>
+        <h2 class="display-6 fw-bold mb-2">Loved by Discerning Connoisseurs</h2>
+        <p class="text-muted mx-auto" style="max-width: 580px;">Over 12,000 satisfied collectors and patrons across 45 countries. Here is what they have to say.</p>
+      </div>
+
+      <div class="row g-4" id="testimonialsContainer">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- VIP Membership & Newsletter Banner -->
+  <section class="py-5">
+    <div class="container">
+      <div class="newsletter-banner text-center text-lg-start">
+        <div class="row align-items-center">
+          <div class="col-lg-7 mb-4 mb-lg-0">
+            <span class="badge bg-primary-subtle text-primary mb-2 px-3 py-2 fw-bold"><i class="bi bi-gem me-1"></i> Lumina Private Circle</span>
+            <h2 class="display-6 fw-bold mb-2">Join the VIP Collector Community</h2>
+            <p class="text-muted mb-0">Receive invitations to secret private archives, priority dispatch on limited runs, and an immediate $20 reward credit toward your first purchase.</p>
+          </div>
+          <div class="col-lg-5">
+            <form id="newsletterForm" class="d-flex flex-column flex-sm-row gap-2">
+              <input type="email" id="newsletterEmailInput" class="form-control py-3 rounded-pill bg-body-tertiary border-secondary border-opacity-25" placeholder="Enter your email address" required>
+              <button type="submit" class="btn btn-primary-glow text-nowrap rounded-pill px-4">
+                <span>Subscribe</span>
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </form>
+            <div class="small text-muted mt-2 text-center text-sm-start">No spam ever. Unsubscribe at any time with one click.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-custom">
+    <div class="container">
+      <div class="row g-4 mb-5">
+        <div class="col-12 col-lg-4">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <span class="brand-icon-gem"><i class="bi bi-diamond-fill"></i></span>
+            <span class="brand-font fs-4 fw-bold">LUMINA<span class="gradient-text">LUXE</span></span>
+          </div>
+          <p class="text-muted pe-lg-4 mb-4">
+            Curating apex-tier acoustics, handcrafted horology, and high-performance minimalist goods for visionary individuals globally.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="#" class="nav-action-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="nav-action-btn" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="nav-action-btn" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="nav-action-btn" aria-label="Github"><i class="bi bi-github"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6 class="fw-bold text-white mb-3">Collections</h6>
+          <a href="#catalogSection" class="footer-link">Audio & Tech</a>
+          <a href="#catalogSection" class="footer-link">Haute Watches</a>
+          <a href="#catalogSection" class="footer-link">Carbon Footwear</a>
+          <a href="#catalogSection" class="footer-link">Pure Cashmere</a>
+          <a href="#catalogSection" class="footer-link">Minimalist Living</a>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6 class="fw-bold text-white mb-3">Client Services</h6>
+          <a href="#" class="footer-link">Order Tracking</a>
+          <a href="#" class="footer-link">Returns & Exchanges</a>
+          <a href="#" class="footer-link">Warranty Details</a>
+          <a href="#" class="footer-link">Shipping Policies</a>
+          <a href="#" class="footer-link">FAQ & Support</a>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6 class="fw-bold text-white mb-3">Company</h6>
+          <a href="#" class="footer-link">Our Heritage</a>
+          <a href="#" class="footer-link">Sustainability</a>
+          <a href="#" class="footer-link">Press & Media</a>
+          <a href="#" class="footer-link">Careers</a>
+          <a href="#" class="footer-link">Retail Showrooms</a>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6 class="fw-bold text-white mb-3">Security & Trust</h6>
+          <p class="small text-muted mb-2">256-bit encrypted SSL checkout and verified global payment gateways.</p>
+          <div class="d-flex flex-wrap gap-2 fs-4 text-secondary">
+            <i class="bi bi-credit-card-2-front" title="Credit Cards"></i>
+            <i class="bi bi-apple" title="Apple Pay"></i>
+            <i class="bi bi-paypal" title="PayPal"></i>
+            <i class="bi bi-shield-lock" title="Secure SSL"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pt-4 border-top border-secondary border-opacity-25 small text-muted">
+        <div>&copy; 2026 Lumina Luxe Inc. All rights reserved. Crafted with HTML5, CSS3 & Bootstrap 5.</div>
+        <div class="d-flex gap-3 mt-3 mt-md-0">
+          <a href="#" class="text-muted">Privacy Policy</a>
+          <span>&bull;</span>
+          <a href="#" class="text-muted">Terms of Service</a>
+          <span>&bull;</span>
+          <a href="#" class="text-muted">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       OFFCANVAS SHOPPING CART
+       ========================================================================= -->
+  <div class="offcanvas offcanvas-end offcanvas-custom" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel" style="width: 440px; max-width: 90vw;">
+    <div class="offcanvas-header border-bottom border-secondary border-opacity-25">
+      <h5 class="offcanvas-title fw-bold" id="cartOffcanvasLabel">
+        <i class="bi bi-bag-check me-2 text-primary"></i> Shopping Cart
+      </h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+
+    <div class="offcanvas-body d-flex flex-column">
+      <!-- Free Shipping Dynamic Progress Tracker -->
+      <div id="freeShippingBarContainer"></div>
+
+      <!-- Items List -->
+      <div class="flex-grow-1 overflow-y-auto pe-1" id="cartItemsContainer">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+
+      <!-- Cart Footer / Totals & Promo -->
+      <div id="cartFooterSection" class="pt-3 border-top border-secondary border-opacity-25 mt-auto">
+        <!-- Voucher Code Input -->
+        <div class="input-group mb-3">
+          <input type="text" id="promoCodeInput" class="form-control form-control-sm bg-body-tertiary border-secondary border-opacity-25" placeholder="Promo code (e.g. NOVA25)">
+          <button class="btn btn-outline-primary btn-sm" type="button" onclick="applyPromoCode()">Apply</button>
+        </div>
+
+        <!-- Breakdown -->
+        <div class="d-flex justify-content-between small text-muted mb-1">
+          <span>Subtotal</span>
+          <span class="fw-semibold text-white" id="cartSubtotalAmount">$0.00</span>
+        </div>
+        <div class="d-flex justify-content-between small text-success mb-1" id="cartDiscountRow" style="display: none;">
+          <span>Voucher Discount</span>
+          <span class="fw-semibold" id="cartDiscountAmount">-$0.00</span>
+        </div>
+        <div class="d-flex justify-content-between small text-muted mb-1">
+          <span>Estimated Shipping</span>
+          <span class="fw-semibold text-white" id="cartShippingAmount">$15.00</span>
+        </div>
+        <div class="d-flex justify-content-between small text-muted mb-2">
+          <span>Sales Tax (8%)</span>
+          <span class="fw-semibold text-white" id="cartTaxAmount">$0.00</span>
+        </div>
+        <div class="d-flex justify-content-between fs-5 fw-bold pt-2 border-top border-secondary border-opacity-25 mb-3">
+          <span>Total</span>
+          <span class="text-primary" id="cartTotalAmount">$0.00</span>
+        </div>
+
+        <button class="btn btn-primary-glow w-100 justify-content-center py-3 mb-2" onclick="openCheckoutModal()">
+          <span>Proceed to Checkout</span>
+          <i class="bi bi-shield-check"></i>
+        </button>
+
+        <div class="d-flex justify-content-between small text-muted">
+          <button class="btn btn-link text-muted p-0 text-decoration-none small" onclick="clearCart()">
+            <i class="bi bi-trash"></i> Clear Cart
+          </button>
+          <span class="small"><i class="bi bi-lock-fill text-success"></i> 256-bit Secure Checkout</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       OFFCANVAS WISHLIST
+       ========================================================================= -->
+  <div class="offcanvas offcanvas-end offcanvas-custom" tabindex="-1" id="wishlistOffcanvas" aria-labelledby="wishlistOffcanvasLabel" style="width: 400px; max-width: 90vw;">
+    <div class="offcanvas-header border-bottom border-secondary border-opacity-25">
+      <h5 class="offcanvas-title fw-bold" id="wishlistOffcanvasLabel">
+        <i class="bi bi-heart me-2 text-danger"></i> My Wishlist
+      </h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div id="wishlistItemsContainer">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       QUICK VIEW MODAL
+       ========================================================================= -->
+  <div class="modal fade" id="quickViewModal" tabindex="-1" aria-labelledby="quickViewModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content modal-content-custom">
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 pt-0">
+          <div class="row g-4">
+            <!-- Left: Gallery -->
+            <div class="col-12 col-md-6">
+              <div class="rounded-3 overflow-hidden bg-black bg-opacity-25 mb-3" style="aspect-ratio: 1/1;">
+                <img id="qvMainImage" src="" alt="Product" class="w-100 h-100 object-fit-cover">
+              </div>
+              <!-- Thumbnails switcher -->
+              <div class="d-flex gap-2" id="qvGalleryThumbnails"></div>
+            </div>
+
+            <!-- Right: Details -->
+            <div class="col-12 col-md-6 d-flex flex-column">
+              <span class="text-primary text-uppercase fw-bold small mb-1" id="qvProductCategory">Category</span>
+              <h3 class="fw-bold mb-2" id="qvProductName">Product Title</h3>
+
+              <div class="d-flex align-items-center mb-3" id="qvProductRating"></div>
+
+              <div class="d-flex align-items-baseline gap-2 mb-3">
+                <span class="display-6 fw-bold text-primary" id="qvProductPrice">$000</span>
+                <span class="fs-5 text-muted text-decoration-line-through" id="qvProductOriginalPrice"></span>
+              </div>
+
+              <p class="text-muted small mb-3" id="qvProductDesc">Description goes here.</p>
+
+              <!-- Features checklist -->
+              <ul class="list-unstyled small mb-3" id="qvFeaturesList"></ul>
+
+              <!-- Color Selection -->
+              <div class="mb-3">
+                <label class="form-label small fw-semibold text-muted d-block">Select Finish:</label>
+                <div class="d-flex gap-2" id="qvColorSwatches"></div>
+              </div>
+
+              <!-- Size Selection -->
+              <div class="mb-3">
+                <label class="form-label small fw-semibold text-muted d-block">Select Variant / Size:</label>
+                <div class="d-flex flex-wrap gap-2" id="qvSizeBadges"></div>
+              </div>
+
+              <div class="small mb-3" id="qvProductStock"></div>
+
+              <!-- Quantity & Add to Cart -->
+              <div class="d-flex gap-3 mt-auto pt-2">
+                <div style="width: 100px;">
+                  <input type="number" id="qvQuantityInput" class="form-control text-center bg-body-tertiary border-secondary border-opacity-25" value="1" min="1" max="10">
+                </div>
+                <button class="btn btn-primary-glow flex-grow-1" onclick="addQuickViewToCart()">
+                  <i class="bi bi-bag-plus"></i> Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       CHECKOUT MODAL
+       ========================================================================= -->
+  <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content modal-content-custom">
+        <div class="modal-header border-bottom border-secondary border-opacity-25">
+          <h5 class="modal-title fw-bold" id="checkoutModalLabel">
+            <i class="bi bi-shield-lock-fill text-primary me-2"></i> Express Checkout
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <!-- Normal Checkout View -->
+          <div id="checkoutFormView">
+            <form id="checkoutForm" onsubmit="processCheckoutOrder(event)">
+              <div class="row g-3">
+                <!-- Shipping Details -->
+                <div class="col-12">
+                  <h6 class="fw-bold text-white mb-2"><i class="bi bi-geo-alt me-1 text-primary"></i> Shipping Address</h6>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small text-muted">Full Name</label>
+                  <input type="text" class="form-control form-control-sm bg-body-tertiary border-secondary border-opacity-25" value="Alexander Wright" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small text-muted">Email Address</label>
+                  <input type="email" class="form-control form-control-sm bg-body-tertiary border-secondary border-opacity-25" value="alexander.wright@lumina.io" required>
+                </div>
+                <div class="col-12">
+                  <label class="form-label small text-muted">Street Address</label>
+                  <input type="text" class="form-control form-control-sm bg-body-tertiary border-secondary border-opacity-25" value="742 Evergreen Terrace, Suite 400" required>
+                </div>
+                <div class="col-md-4">
+                  <label class="form-label small text-muted">City</label>
+                  <input type="text" class="form-control form-control-sm bg-body-tertiary border-secondary border-opacity-25" value="San Francisco" required>
+                </div>
+                <div class="col-md-4">
+                  <label class="form-label small text-muted">Postal Code</label>
+                  <input type="text" class="form-control form-control-sm bg-body-tertiary border-secondary border-opacity-25" value="94107" required>
+                </div>
+                <div class="col-md-4">
+                  <label class="form-label small text-muted">Country</label>
+                  <select class="form-select form-select-sm bg-body-tertiary border-secondary border-opacity-25">
+                    <option selected>United States</option>
+                    <option>United Kingdom</option>
+                    <option>Germany</option>
+                    <option>Canada</option>
+                    <option>Japan</option>
+                  </select>
+                </div>
+
+                <!-- Payment Details -->
+                <div class="col-12 mt-4">
+                  <h6 class="fw-bold text-white mb-2"><i class="bi bi-credit-card me-1 text-primary"></i> Payment Method</h6>
+                  <div class="d-flex flex-wrap gap-3 mb-3">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="paymentOption" id="payCard" checked>
+                      <label class="form-check-label small" for="payCard"><i class="bi bi-credit-card-2-back me-1"></i> Card</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="paymentOption" id="payApple">
+                      <label class="form-check-label small" for="payApple"><i class="bi bi-apple me-1"></i> Apple Pay</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="paymentOption" id="payPaypal">
+                      <label class="form-check-label small" for="payPaypal"><i class="bi bi-paypal me-1"></i> PayPal</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-8">
+                  <label class="form-label small text-muted">Card Number</label>
+                  <input type="text" class="form-control form-control-sm bg-body-tertiary border-secondary border-opacity-25" placeholder="4242 &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; 4242" value="4242 8890 1234 4242" required>
+                </div>
+                <div class="col-md-2">
+                  <label class="form-label small text-muted">Expiry</label>
+                  <input type="text" class="form-control form-control-sm bg-body-tertiary border-secondary border-opacity-25" placeholder="MM/YY" value="08/28" required>
+                </div>
+                <div class="col-md-2">
+                  <label class="form-label small text-muted">CVV</label>
+                  <input type="text" class="form-control form-control-sm bg-body-tertiary border-secondary border-opacity-25" placeholder="CVC" value="892" required>
+                </div>
+
+                <!-- Summary Callout -->
+                <div class="col-12 mt-4">
+                  <div class="glass-panel p-3">
+                    <div class="d-flex justify-content-between small text-muted mb-1">
+                      <span>Order Subtotal:</span>
+                      <span id="coSubtotalDisplay">$0.00</span>
+                    </div>
+                    <div class="d-flex justify-content-between small text-muted mb-1">
+                      <span>Express Shipping:</span>
+                      <span id="coShippingDisplay">FREE</span>
+                    </div>
+                    <div class="d-flex justify-content-between small text-muted mb-2">
+                      <span>Estimated Tax:</span>
+                      <span id="coTaxDisplay">$0.00</span>
+                    </div>
+                    <div class="d-flex justify-content-between fs-5 fw-bold border-top border-secondary border-opacity-25 pt-2">
+                      <span>Total Due Today:</span>
+                      <span class="text-primary" id="coTotalDisplay">$0.00</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 mt-3">
+                  <button type="submit" id="submitOrderBtn" class="btn btn-primary-glow w-100 justify-content-center py-3">
+                    <i class="bi bi-shield-lock me-2"></i> Pay & Complete Order
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- Checkout Success Confirmation View -->
+          <div id="checkoutSuccessView" style="display: none;" class="text-center py-4">
+            <div class="order-success-check">
+              <i class="bi bi-check-lg"></i>
+            </div>
+            <h3 class="fw-bold mb-2">Order Confirmed!</h3>
+            <p class="text-muted mb-3">Thank you for your patronage. Your bespoke package is being prepared for dispatch.</p>
+
+            <div class="glass-panel p-3 d-inline-block text-start mb-4" style="min-width: 320px;">
+              <div class="d-flex justify-content-between small text-muted mb-1">
+                <span>Order Reference:</span>
+                <strong class="text-white" id="confirmedOrderNumber">NOVA-89214</strong>
+              </div>
+              <div class="d-flex justify-content-between small text-muted mb-1">
+                <span>Estimated Delivery:</span>
+                <strong class="text-white">2-3 Business Days</strong>
+              </div>
+              <div class="d-flex justify-content-between small text-muted">
+                <span>Carrier:</span>
+                <strong class="text-white">DHL Express Worldwide</strong>
+              </div>
+            </div>
+
+            <div>
+              <button class="btn btn-primary-glow px-4" data-bs-dismiss="modal">
+                Continue Shopping
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container toast-container-custom" id="toastContainer"></div>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top" title="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Helper for category card links -->
+  <script>
+    function setCategoryFilter(category) {
+      const pill = document.querySelector(`.filter-pill[data-category="${category}"]`);
+      if (pill) pill.click();
+      const catalog = document.getElementById('catalogSection');
+      if (catalog) catalog.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+
+  <!-- Bootstrap 5.3.3 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- Application Products Data & Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
